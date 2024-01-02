@@ -11,14 +11,16 @@ Command line interpreters can be more useful than graphical user interfaces in s
 
 <h3>How does a CLI work ?</h3>
 
-A command interpreter is a way to interact with the system with **text-based commands only.** While there are several command-line interpreters, they do not work the same way.
-This is because command lines are **based on the syntax of the programming language** that we are using. Thus, a command that works on a CLI on one system may **not work the same way in other systems.** 
+A command interpreter is a way to interact with the system with **text-based commands only.**<br>
+While there are several command-line interpreters, they do not work the same way.<br>
+This is because command lines are **based on the syntax of the programming language** that we are using.<br>
+Thus, a command that works on a CLI on one system may **not work the same way in other systems.** 
 
 <h3>What is a command line ?</h3>
 
-The command line is a blank line and cursor on the screen, allowing the user **to type in instructions for immediate execution.**
-Commands can be executed **one at a time by typing the command and pressing Enter.** They can also be executed as a group, in which case the commands are typed into **a "batch" or "script" file.**
-The file name is typed on the command line, and pressing Enter causes **each command to be executed in order.**
+- The command line is a blank line and cursor on the screen, allowing the user **to type in instructions for immediate execution.**
+- Commands can be executed **one at a time by typing the command and pressing Enter.**
+- They can also be executed as a group, in which case the commands are typed into **a "batch" or "script" file.** The file name is typed on the command line, and pressing Enter causes **each command to be executed in order.**
 
 <h3>Resources</h3>
 https://www.tutorialspoint.com/command-line-interpreters<br>
