@@ -16,6 +16,27 @@ While there are several command-line interpreters, they do not work the same way
 This is because command lines are **based on the syntax of the programming language** that we are using.<br>
 Thus, a command that works on a CLI on one system may **not work the same way in other systems.** 
 
+1- Users interact with a system or application by typing in text (commands).<br>
+2- The command is typed on a specific line following a **visual prompt** from the computer. A command prompt (or just prompt) is a sequence of (one or more) characters used in a command-line interface to indicate readiness to accept commands. It literally prompts the user to take action.<br>
+3- The CLI **receives and displays all characters you have entered.** When you press Enter, the CLI begins to process the command.<br>
+4- Command **matching** phase :<br>
+  - The system **compares** the received command with commands in the current command mode to search for a matching command.<br>
+  - If a **matching command exists**, the system enters the command **checking phase**.<br>
+  - If a **matching command does not exist**, the system informs you that the **command is invalid and waits for a new command.**<br>
+  
+5- Command checking phase :<br>
+The CLI **checks every element of the entered command against the matching command** (including the string length and value range validity)<br>
+  - If all command elements are **valid**, the system **authenticates the command.**<br>
+  - If any command element is **invalid**, the system **informs you that the command is invalid** and waits for a new command.<br>
+  
+6- Command **parsing** phase<br>
+After parsing a command into a **packet that carries specific information**, the CLI sends the packet to the command processing module and waits for the results.<br>
+The CLI then **parses** the packet carrying the results and **displays** them on the terminal.<br>
+
+7- The system responds to the text, and the user may then type on the next command line that appears.<br>
+
+Through this command and response interaction, the user is able to issue a series of commands, which are executed by the system or program.
+
 <h3>What is a command line ?</h3>
 
 - The command line is a blank line and cursor on the screen, allowing the user **to type in instructions for immediate execution.**
@@ -25,6 +46,7 @@ Thus, a command that works on a CLI on one system may **not work the same way in
 <h3>Resources</h3>
 https://www.tutorialspoint.com/command-line-interpreters<br>
 https://techcult.com/what-is-a-command-line-interpreter/<br>
-https://www.pcmag.com/encyclopedia/term/command-line<b
+https://www.pcmag.com/encyclopedia/term/command-line<br>
+https://support.huawei.com/enterprise/en/doc/EDOC1100282196/f48c4613/understanding-command-line-interfaces
 
 
