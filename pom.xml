@@ -5,4 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>simple-java-cli</name>
   <description>Simple Java CLI</description>
+  <properties>
+	  <maven.compiler.release>17</maven.compiler.release>
+	</properties>
 </project>
