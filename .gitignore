@@ -1,0 +1,7 @@
+target/
+.metadata
+
+### Eclipse ###
+.classpath
+.project
+.settings
