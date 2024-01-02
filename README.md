@@ -43,10 +43,36 @@ Through this command and response interaction, the user is able to issue a serie
 - Commands can be executed **one at a time by typing the command and pressing Enter.**
 - They can also be executed as a group, in which case the commands are typed into **a "batch" or "script" file.** The file name is typed on the command line, and pressing Enter causes **each command to be executed in order.**
 
+<h3>CLI structure</h3>
+
+command [arguments] [options]<br>
+<ins>exemple :</ins> ```ls /home/dir --all```
+
+program command [arguments] [options]<br>
+<ins>exemple:</ins> ```git commit -m "first commit"```
+
+Commands are usually represented as **verbs** and programs as **nouns** (as they are usually a short version of the program's name).
+
+**Arguments**<br>
+- Arguments in a CLI allow users **to send data** to the application, sometimes in a command context.<br>
+- They are often called positional arguments because they are **identified by their position**, which means users must write the value for each argument in the correct position.<br>
+- They can be **required or not.** If they are not required, the command's behavior may vary in the absence of the parameter, often using a default value instead.<br>
+
+**Options**<br>
+- Options are named parameters that can be passed to a command and are represented by **key-value pairs.**<br>
+- Unlike positional arguments, **their position is not important.**<br>
+- Options are usually (not always) used to represent **optional parameters.** In most cases, if a parameter is required, a positional argument is the best way to go.<br>
+- Some options have **aliases**, which are short versions of the same option, easier to type and remember. They're usually identified by a **single dash prefix.**<br>
+<ins>exemple :</ins> ```mycli -h```<br>
+- Options that don't require a value are often called **Flags.** They are **boolean**, meaning their presence indicates "true" and their absence "false".<br>
+<ins>exemple:</ins> ```git push --force```
+
+
 <h3>Resources</h3>
 https://www.tutorialspoint.com/command-line-interpreters<br>
 https://techcult.com/what-is-a-command-line-interpreter/<br>
 https://www.pcmag.com/encyclopedia/term/command-line<br>
 https://support.huawei.com/enterprise/en/doc/EDOC1100282196/f48c4613/understanding-command-line-interfaces
+https://dev.to/paulasantamaria/command-line-interfaces-structure-syntax-2533#11-structure
 
 
