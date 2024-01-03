@@ -6,6 +6,8 @@
   <name>simple-java-cli</name>
   <description>Simple Java CLI</description>
   <properties>
-	  <maven.compiler.release>17</maven.compiler.release>
+	  	<maven.compiler.source>17</maven.compiler.source>
+    	<maven.compiler.target>17</maven.compiler.target>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 </project>
