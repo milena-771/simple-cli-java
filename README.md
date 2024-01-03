@@ -72,7 +72,6 @@ Commands are usually represented as **verbs** and programs as **nouns** (as they
 https://www.tutorialspoint.com/command-line-interpreters<br>
 https://techcult.com/what-is-a-command-line-interpreter/<br>
 https://www.pcmag.com/encyclopedia/term/command-line<br>
-https://support.huawei.com/enterprise/en/doc/EDOC1100282196/f48c4613/understanding-command-line-interfaces
 https://dev.to/paulasantamaria/command-line-interfaces-structure-syntax-2533#11-structure
 
 
