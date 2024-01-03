@@ -5,6 +5,8 @@ public class Match {
 	public static Boolean isCommandExist(String inputs) {
 		if(inputs.equals("hw")) {
 			return true;
+		}else if(inputs.equals("date")) {
+			return true;
 		}else {
 			return false;
 		}

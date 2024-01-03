@@ -8,6 +8,8 @@ public class Execute {
 		String response = "";
 		if(command.equals("hw")) {
 			response = Command.hw();
+		}else if(command.equals("date")) {
+			response = Command.date();
 		}
 		return response;
 	}
