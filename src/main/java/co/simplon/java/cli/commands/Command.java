@@ -1,8 +1,10 @@
+
 package co.simplon.java.cli.commands;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -30,8 +32,12 @@ public class Command {
 		return response;
 	}
 	
-	public static String print(String arguments) {
-		String response = arguments;
-		return response;	
+	public static String print(String[] inputs) {
+		String response = "";
+		if(inputs.length > 1) {
+			String arguments = inputs[1];
+			response = arguments;
+		}
+		return response;
 	}
 }

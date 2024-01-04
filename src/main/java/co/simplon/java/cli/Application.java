@@ -1,21 +1,13 @@
 package co.simplon.java.cli;
 
-import co.simplon.java.cli.parser.Execute;
-import co.simplon.java.cli.parser.Match;
-import co.simplon.java.cli.parser.Receive;
+import co.simplon.java.cli.parser.Executer;
+import co.simplon.java.cli.parser.Interpreter;
+import co.simplon.java.cli.parser.Parser;
 
 public class Application {
 	
 	public static void main(String[] args) {
 		String inputs = args[0];
-		String response = "";
-		String command = Receive.extractCommand(inputs);
-		String arguments = Receive.extractArguments(inputs);
-		if(Match.isCommandExist(command)) {
-			response = Execute.executeCommand(command, arguments);
-		}else {
-			response = "Command not found";
-		}
-		System.out.println(response);
+		Interpreter.interprete(inputs);
 	}
 }
