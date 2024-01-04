@@ -10,10 +10,11 @@ public class Application {
 		String inputs = args[0];
 		String response = "";
 		String command = Receive.extractCommand(inputs);
+		String arguments = Receive.extractArguments(inputs);
 		if(Match.isCommandExist(command)) {
-			response = Execute.executeCommand(command);
+			response = Execute.executeCommand(command, arguments);
 		}else {
-			response = "No command found";
+			response = "Command not found";
 		}
 		System.out.println(response);
 	}
