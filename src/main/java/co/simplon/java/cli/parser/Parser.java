@@ -2,7 +2,7 @@ package co.simplon.java.cli.parser;
 
 import java.util.Arrays;
 
-import co.simplon.java.cli.commands.Command;
+import co.simplon.java.cli.commands.Commands;
 
 public class Parser {
 

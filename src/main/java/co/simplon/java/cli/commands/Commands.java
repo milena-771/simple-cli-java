@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Command {
+public class Commands {
 	
 	public static String hw() {
 		return "Hello World!";
