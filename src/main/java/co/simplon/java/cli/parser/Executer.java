@@ -18,6 +18,8 @@ public class Executer {
 			response = Commands.datetime();
 		}else if(command.equals("print") || command.equals("echo")) {
 			response = Commands.print(line);
+		}else if(command.equals("secsanta")) {
+			response = Commands.secsanta(line);
 		}else {
 			response = "Command not found.";
 		}
