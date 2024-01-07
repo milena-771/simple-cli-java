@@ -32,10 +32,10 @@ public class Commands {
 		return response;
 	}
 	
-	public static String print(String[] inputs) {
+	public static String print(ParsedCommandLine line) {
 		String response = "";
-		if(inputs.length > 1) {
-			String arguments = inputs[1];
+		if(line.getArguments() != null) {
+			String arguments = line.getArguments();
 			response = arguments;
 		}
 		return response;

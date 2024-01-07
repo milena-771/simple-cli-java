@@ -1,11 +1,12 @@
 package co.simplon.java.cli.parser;
 
+import co.simplon.java.cli.commands.ParsedCommandLine;
 import co.simplon.java.cli.commands.Commands;
 
 public class Executer {
 	
-	public static String execute(String[] inputs) {
-		String command = inputs[0];
+	public static String execute(ParsedCommandLine line) {
+		String command = line.getCommand();
 		String response = "";
 		if(command.equals("hw")) {
 			response = Commands.hw();
@@ -16,7 +17,7 @@ public class Executer {
 		}else if(command.equals("datetime")) {
 			response = Commands.datetime();
 		}else if(command.equals("print") || command.equals("echo")) {
-			response = Commands.print(inputs);
+			response = Commands.print(line);
 		}else {
 			response = "Command not found.";
 		}
