@@ -11,11 +11,11 @@ public class Executer {
 		if(command.equals("hw")) {
 			response = Commands.hw();
 		}else if(command.equals("date")) {
-			response = Commands.date();
+			response = Commands.date(line);
 		}else if(command.equals("time")){
-			response = Commands.time();
+			response = Commands.time(line);
 		}else if(command.equals("datetime")) {
-			response = Commands.datetime();
+			response = Commands.datetime(line);
 		}else if(command.equals("print") || command.equals("echo")) {
 			response = Commands.print(line);
 		}else if(command.equals("secsanta")) {
