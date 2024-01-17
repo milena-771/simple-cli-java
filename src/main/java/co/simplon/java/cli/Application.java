@@ -1,8 +1,8 @@
 package co.simplon.java.cli;
 
-import co.simplon.java.cli.parser.Executer;
-import co.simplon.java.cli.parser.Interpreter;
-import co.simplon.java.cli.parser.Parser;
+import co.simplon.java.cli.interpreter.Executer;
+import co.simplon.java.cli.interpreter.Interpreter;
+import co.simplon.java.cli.interpreter.Parser;
 
 public class Application {
 	

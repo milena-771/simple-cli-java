@@ -1,4 +1,4 @@
-package co.simplon.java.cli.parser;
+package co.simplon.java.cli.interpreter;
 
 import java.util.Arrays;
 

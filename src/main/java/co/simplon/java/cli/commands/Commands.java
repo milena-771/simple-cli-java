@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -53,12 +54,12 @@ public class Commands {
 				Instant nowUtc = Instant.now();
 				ZoneId zone = ZoneId.of(timezone);
 				LocalTime time = LocalTime.ofInstant(nowUtc, zone);
-				response = time.toString();
+				response = time.truncatedTo(ChronoUnit.SECONDS).toString();
 			}else {
 				response = timezone;
 			}
 		}else {
-			LocalTime time = LocalTime.now();
+			LocalTime time = LocalTime.now().truncatedTo(ChronoUnit.SECONDS);
 			response = time.toString();
 		}
 		return response;
@@ -71,13 +72,13 @@ public class Commands {
 			if(TIMEZONES.contains(timezone)) {
 				Instant nowUtc = Instant.now();
 				ZoneId zone = ZoneId.of(timezone);
-				LocalDateTime datetime = LocalDateTime.ofInstant(nowUtc, zone);
+				LocalDateTime datetime = LocalDateTime.ofInstant(nowUtc, zone).truncatedTo(ChronoUnit.SECONDS);
 				response = datetime.toString();
 			}else {
 				response = timezone;
 			}			
 		}else {
-			LocalDateTime dateTime = LocalDateTime.now();
+			LocalDateTime dateTime = LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS);
 			response = dateTime.toString();
 		}
 		return response;

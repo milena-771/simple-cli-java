@@ -1,4 +1,4 @@
-package co.simplon.java.cli.parser;
+package co.simplon.java.cli.interpreter;
 
 import co.simplon.java.cli.commands.ParsedCommandLine;
 import co.simplon.java.cli.commands.Commands;
