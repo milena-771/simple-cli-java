@@ -14,12 +14,14 @@ import co.simplon.java.cli.interpreter.Parser;
 class ParsedCommandLineTest {
 	
 	@Test
+	@DisplayName("Test should not return a null instance from ParsedCommandLine constructor")
 	void shouldConstructorReturnsWithNoneNullParams() {
 		ParsedCommandLine actual = new ParsedCommandLine();
 		assertNotNull(actual);
 	}
 	
 	@Test
+	@DisplayName("Test for toString method")
 	void shouldToStringReturnsNotNull() {
 		ParsedCommandLine line = new ParsedCommandLine();
 		String actual = line.toString();
@@ -27,11 +29,22 @@ class ParsedCommandLineTest {
 	}
 	
 	@Test
+	@DisplayName("Test for getCommand method")
 	void shouldGetCommandReturnSameInputFromSetCommand() {
 		ParsedCommandLine line = new ParsedCommandLine();
 		line.setCommand("test");
 		String actual = line.getCommand();
 		assertEquals("test", actual);
+	}
+	
+	@Test
+	@DisplayName("Test for getCommand method")
+	void shouldGetArgumentsReturnSameInputFromSetArguments() {
+		ParsedCommandLine line = new ParsedCommandLine();
+		line.setCommand("print");
+		line.setArguments("Hello everybody !");
+		String actual = line.getArguments();
+		assertEquals("Hello everybody !", actual);
 	}
 	
 

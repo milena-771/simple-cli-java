@@ -34,6 +34,7 @@ class ParserTest {
 	}
 	
 	@Test
+	@DisplayName("Test to check blank command and arguments when inputs is a whitespace")
 	void shouldReturnError() {
 		ParsedCommandLine line = Parser.extract(" ");
 		assertEquals("", line.getCommand());
@@ -42,6 +43,7 @@ class ParserTest {
 	
 	@ParameterizedTest
 	@MethodSource
+	@DisplayName("Test Parser class to extract arguments from different inputs")
 	void shouldGetArgumentsFromInputs(String inputs, String expected) {
 		ParsedCommandLine actual = Parser.extract(inputs);
 		assertEquals(expected, actual.getArguments());

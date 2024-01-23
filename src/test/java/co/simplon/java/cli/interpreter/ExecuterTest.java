@@ -10,6 +10,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import co.simplon.java.cli.commands.ParsedCommandLine;
@@ -17,6 +18,7 @@ import co.simplon.java.cli.commands.ParsedCommandLine;
 public class ExecuterTest {
 	
 	@Test
+	@DisplayName("Test for hw command from Executer")
 	void shouldReturnHelloWorldIfCommandIsHw() {
 		ParsedCommandLine line = new ParsedCommandLine();
 		line.setCommand("hw");
@@ -25,6 +27,7 @@ public class ExecuterTest {
 	}
 	
 	@Test
+	@DisplayName("Test return error response if a command is called in upper case from Executer ")
 	void shouldReturnErrorIfCommandIsHwUpperCase() {
 		ParsedCommandLine line = new ParsedCommandLine();
 		line.setCommand("HW");
@@ -33,6 +36,7 @@ public class ExecuterTest {
 	}
 	
 	@Test
+	@DisplayName("Test for date command from Executer")
 	void shouldReturnDateIfCommandIsDate() {
 		ParsedCommandLine line = new ParsedCommandLine();
 		line.setCommand("date");
@@ -42,6 +46,7 @@ public class ExecuterTest {
 	}
 	
 	@Test
+	@DisplayName("Test for time command from Executer")
 	void shouldReturnTimeIfCommandIsTime() {
 		ParsedCommandLine line = new ParsedCommandLine();
 		line.setCommand("time");
@@ -51,6 +56,7 @@ public class ExecuterTest {
 	}
 	
 	@Test
+	@DisplayName("Test for datetime command from Executer")
 	void shouldReturnDateTimeIfCommandIsDatetime() {
 		ParsedCommandLine line = new ParsedCommandLine();
 		line.setCommand("datetime");
@@ -60,6 +66,7 @@ public class ExecuterTest {
 	}
 	
 	@Test
+	@DisplayName("Test for print command from Executer")
 	void shouldReturnArgumentsIfCommandIsPrint() {
 		ParsedCommandLine line = new ParsedCommandLine();
 		line.setCommand("print");
@@ -70,6 +77,7 @@ public class ExecuterTest {
 	}
 	
 	@Test
+	@DisplayName("Test for echo command from Executer")
 	void shouldReturnArgumentsIfCommandIsEcho() {
 		ParsedCommandLine line = new ParsedCommandLine();
 		line.setCommand("echo");
@@ -80,6 +88,7 @@ public class ExecuterTest {
 	}
 	
 	@Test
+	@DisplayName("Test for secsanta command from Executer")
 	void shouldReturnPairsInAStringIfCommandIsSecsanta() {
 		ParsedCommandLine line = new ParsedCommandLine();
 		line.setCommand("secsanta");

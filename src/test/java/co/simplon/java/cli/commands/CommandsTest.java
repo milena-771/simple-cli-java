@@ -124,7 +124,7 @@ class CommandsTest {
 	@ParameterizedTest
 	@MethodSource
 	@DisplayName("Test return error response by datetime command with wrong arguments")
-	void shouldReturnResponseWithErrorMessageIfIncorrectArguments(String arguments, String expected) {
+	void shouldReturnErrorResponseIfIncorrectArguments(String arguments, String expected) {
 		ParsedCommandLine line = new ParsedCommandLine();
 		line.setCommand("datetime");
 		line.setArguments(arguments);
@@ -132,7 +132,7 @@ class CommandsTest {
 		assertEquals(expected, actual);
 	}
 	
-	static Stream<Arguments> shouldReturnResponseWithErrorMessageIfArgumentIncorrect(){
+	static Stream<Arguments> shouldReturnErrorResponseIfIncorrectArguments(){
 		return Stream.of(Arguments.of("--timezone\"Asia/Tokyo\"", "Did you mean --timezone= stupid idiot?"),
 						Arguments.of("--timezone=", "Please specify a time zone name"),
 						Arguments.of("--timezone=Asia/Tokyo", "Please specify a time zone name between quotes"),
