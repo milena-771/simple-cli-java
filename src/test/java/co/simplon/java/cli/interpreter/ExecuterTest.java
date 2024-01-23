@@ -1,11 +1,14 @@
 package co.simplon.java.cli.interpreter;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
@@ -74,6 +77,17 @@ public class ExecuterTest {
 		String actual = Executer.execute(line);
 		String expected = "Hello everybody";
 		assertEquals(expected, actual);		
+	}
+	
+	@Test
+	void shouldReturnPairsInAStringIfCommandIsSecsanta() {
+		ParsedCommandLine line = new ParsedCommandLine();
+		line.setCommand("secsanta");
+		line.setArguments("Amélie,Isabelle,Emilie,Olivier");
+		Pattern pattern = Pattern.compile("([)(\\d*::\\d*)(])(\\s*){3}");
+		String actual = Executer.execute(line);
+		Matcher matcher = pattern.matcher(actual);
+		assertTrue(matcher.find());	
 	}
 
 }

@@ -138,10 +138,10 @@ public class Commands {
 					int valueIndex = random.nextInt(namesList.size());
 					String value = namesList.get(valueIndex);
 					namesList.remove(valueIndex);
-					pairs.put(key, value);
+					pairs.put(key.trim(), value.trim());
 				}
 				for(Map.Entry<String, String> pair : pairs.entrySet()) {
-					String tmp = "["+ pair.getKey()+"::"+pair.getValue()+"] ";
+					String tmp = "["+pair.getKey()+"::"+pair.getValue()+"] ";
 					response += tmp;
 				}
 			}else {
@@ -152,4 +152,14 @@ public class Commands {
 		}
 		return response;
 	}
+	
+	
+	/*public static String buildResponse(Map<String, String> pairs) {
+		String response="";
+		for(Map.Entry<String, String> pair : pairs.entrySet()) {
+			String tmp = "["+pair.getKey()+"::"+pair.getValue()+"] ";
+			response += tmp;
+		}
+		return response;
+	}*/
 }
