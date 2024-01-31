@@ -6,6 +6,9 @@ import co.simplon.java.cli.commands.ParsedCommandLine;
 import co.simplon.java.cli.commands.Commands;
 
 public class Parser {
+	
+	private Parser() {
+	}
 
 	public static ParsedCommandLine extract(String inputs) {
 		String[] lineArr = inputs.split(" ", 2);

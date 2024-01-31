@@ -23,6 +23,9 @@ public class Commands {
 	
 	private static final Set<String> TIMEZONES = Set.of(TimeZone.getAvailableIDs());
 	
+	private Commands() {
+	}
+	
 	public static String hw() {
 		return "Hello World!";
 	}

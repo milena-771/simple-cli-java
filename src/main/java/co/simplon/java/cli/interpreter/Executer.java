@@ -5,6 +5,9 @@ import co.simplon.java.cli.commands.Commands;
 
 public class Executer {
 	
+	private Executer() {
+	}
+	
 	public static String execute(ParsedCommandLine line) {
 		String command = line.getCommand();
 		String response = "";

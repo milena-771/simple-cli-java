@@ -4,6 +4,9 @@ import co.simplon.java.cli.commands.ParsedCommandLine;
 
 public class Interpreter {
 	
+	private Interpreter() {
+	}
+	
 	public static String interprete(String inputs) {
 		if(inputs != null) {
 			ParsedCommandLine commandLine = Parser.extract(inputs);
