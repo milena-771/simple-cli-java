@@ -2,6 +2,17 @@
 
 ## General description
 
+This school project aims to develop a Java program that interprets command line inputs and produces corresponding outputs. The project involves the following key aspects:
+
+**Objective:**<br>
+
+To create a Java application that reads command line inputs, interprets them, and displays the corresponding results.
+- **Class Design:** The main class, Application, contains a single main method, which is used to test various commands.
+- **Command Implementation:** Each command is implemented as a separate method, each returning a string.
+- **Input and Output:** The program does not include a graphical user interface. It takes input from main method and displays the result in the console.
+
+The main goal is to design a system where the command line serves as the program's input method, and the output is displayed directly in the console, facilitating straightforward testing and execution of various commands.
+
 ## Commands
 
 **`hw`**
